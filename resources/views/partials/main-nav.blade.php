@@ -9,17 +9,26 @@
 	<ul class="dropdown-menu" role="menu">
 
 		<li><a href="https://envoyer.io">Envoyer</a></li>
+		<li><a href="https://horizon.laravel.com">Horizon</a></li>
 		<li><a href="https://lumen.laravel.com">Lumen</a></li>
+		<li><a href="https://nova.laravel.com">Nova</a></li>
 		<li><a href="https://spark.laravel.com">Spark</a></li>
 
 		<li class="divider"></li>
 
+		<li><a href="https://github.com/ElfSundae/laravel.com" target="_blank">@lang('About Mirror')</a></li>
+
+		<li class="divider"></li>
+
+		<li><a href="https://laracon.com.au">Laracon AU</a></li>
 		<li><a href="https://laracon.eu">Laracon EU</a></li>
 		<li><a href="http://laracon.us">Laracon US</a></li>
 		<li><a href="https://laracon.net">Laracon Online</a></li>
 
 		<li class="divider"></li>
 
+		<li><a href="https://blog.laravel.com">Blog</a></li>
+		<li><a href="https://laravel.com/certification">Certification</a></li>
 		<li><a href="https://laracasts.com/discuss">Forums</a></li>
 		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
@@ -31,10 +40,10 @@
 
 <li class="dropdown language-dropdown">
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-		<img src="/assets/flag/{{ app()->getLocale() }}.png" width="22">
+		<img src="/assets/flag/{{ app()->getLocale() }}.png">
 	</a>
-	<ul class="dropdown-menu dropdown-menu-right language-dropdown-menu" role="menu">
-		<li><a href="#" data-locale=""><img src="/assets/flag/en.png" width="17"> English</a></li>
-		<li><a href="#" data-locale="zh"><img src="/assets/flag/zh.png" width="17"> 中文</a></li>
+	<ul class="dropdown-menu dropdown-menu-right" role="menu">
+		<li><a href="#" data-locale=""><img src="/assets/flag/en.png"> English</a></li>
+		<li><a href="#" data-locale="zh"><img src="/assets/flag/zh.png"> 中文</a></li>
 	</ul>
 </li>

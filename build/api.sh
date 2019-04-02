@@ -15,7 +15,11 @@ git clone https://github.com/laravel/framework.git ${sami}/laravel
 
 ${sami}/vendor/bin/sami.php update ${sami}/sami.php
 
-cp -r ${sami}/build/* ${base}/public/api
+# Delete old directory before copying new one
+rm -rf ${base}/public/api
+
+# Copy new docs to public path
+cp -R ${sami}/build ${base}/public/api
 
 # Cleanup After
 rm -rf ${sami}/build

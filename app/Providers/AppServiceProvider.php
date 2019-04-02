@@ -66,11 +66,7 @@ class AppServiceProvider extends ServiceProvider
      */
     protected function setupConfiguration()
     {
-        if (! $this->app->configurationIsCached()) {
-            config([
-                'locales' => ['zh'],
-            ]);
-        }
+        config()->set('locales', ['zh']);
     }
 
     /**
@@ -80,28 +76,29 @@ class AppServiceProvider extends ServiceProvider
      */
     protected function registerEventListeners()
     {
-        $localeUpdated = class_exists(LocaleUpdated::class) ?
-            LocaleUpdated::class : 'locale.changed';
+        Event::listen(
+            class_exists(LocaleUpdated::class) ? LocaleUpdated::class : 'locale.changed',
+            function ($locale) {
+                if ($locale instanceof LocaleUpdated) {
+                    $locale = $locale->locale;
+                }
 
-        Event::listen($localeUpdated, function ($locale) {
-            if ($locale instanceof LocaleUpdated) {
-                $locale = $locale->locale;
+                $this->setRootUrlForLocale($locale);
             }
+        );
 
-            $this->setRootUrlForLocale($locale);
-        });
+        Event::listen(
+            class_exists(RequestHandled::class) ? RequestHandled::class : 'kernel.handled',
+            function ($request, $response = null) {
+                if ($request instanceof RequestHandled) {
+                    list($request, $response) = [
+                        $request->request, $request->response,
+                    ];
+                }
 
-        $requestHandled = class_exists(RequestHandled::class) ?
-            RequestHandled::class : 'kernel.handled';
-
-        Event::listen($requestHandled, function ($request, $response = null) {
-            if ($request instanceof RequestHandled) {
-                $response = $request->response;
-                $request = $request->request;
+                $this->replaceLinksForResponse($request, $response);
             }
-
-            $this->replaceLinksForResponse($request, $response);
-        });
+        );
     }
 
     /**
@@ -112,6 +109,7 @@ class AppServiceProvider extends ServiceProvider
     protected function setRootUrlForLocale($locale)
     {
         $rootUrl = $this->app['request']->root();
+
         if ($locale != $this->defaultLocale) {
             $rootUrl .= '/'.$locale;
         }

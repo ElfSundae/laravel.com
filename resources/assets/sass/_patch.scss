@@ -6,15 +6,42 @@
     border-radius: 6px;
 }
 
+// Language dropdown
+.language-dropdown {
+    .dropdown-toggle img {
+        width: 22px;
+    }
+
+    .dropdown-menu img {
+        width: 17px;
+    }
+}
+
+// GitHub source of this mirror site
+.main .nav-github {
+    a > img {
+        width: 18px;
+    }
+}
+
 // Adjust font size for fallback "Source Sans Pro"
 .sidebar {
+    h2 {
+        font-weight: 600;
+    }
+
     > ul {
         > li {
             font-size: 14px;
+            line-height: 1.8;
             > ul {
                 font-size: 14px;
             }
         }
+    }
+
+    a {
+        line-height: 1.8;
     }
 }
 

@@ -1,14 +1,31 @@
-.packages { @include items; }
+.packages { 
+    @include items; 
+    flex-wrap: wrap;
+}
 
-.packages .third:not(:last-child) {
-    border-right: 2px solid #f0f1f3;
+.packages .package-row {
+    display: flex;
+
+    &:last-child {
+        .package {
+            padding-bottom: 0;
+        }
+    }
 }
 
 .packages .package {
-    margin-bottom: 30px;
-    display: flex;
+    width: 33.33%;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding-bottom: 30px;
 
-    &:last-child { margin-bottom: 0; }
+    &:not(:last-child){
+        border-right: 2px solid #f0f1f3;
+    }
+}
+
+.packages .package {
+    display: flex;
 
     .package-title {
         color: #444;
@@ -33,18 +50,18 @@
     }
 }
 
+
 @media all and (max-width: 800px) {
     .packages {
-        flex-wrap: wrap;
-        .third { border: none !important; }
-        .package {
-            border-bottom: 1px solid #f0f1f3;
-            padding-bottom: 15px;
+        .package-row {
+            flex-wrap: wrap;
         }
-        .package:last-child { margin-bottom: 30px; }
-        .last {
-            border: none;
-            margin-bottom: 0 !important;
+        .package{
+            width: 100%;
+            border-right-width: 0 !important;
+            border-bottom: 1px solid #f0f1f3;
+            padding-bottom: 15px !important;
+            margin-bottom: 30px;
         }
     }
 }

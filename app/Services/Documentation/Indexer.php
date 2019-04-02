@@ -97,6 +97,9 @@ class Indexer
      */
     public function indexAllDocuments()
     {
+        $this->index->clearIndex();
+        $this->client->initIndex(static::$index_name)->clearIndex();
+
         foreach (Documentation::getDocVersions() as $key => $title) {
             $this->indexAllDocumentsForVersion($key);
         }

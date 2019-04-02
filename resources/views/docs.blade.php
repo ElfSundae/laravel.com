@@ -16,6 +16,21 @@
 
 	<div class="slide-docs-nav">
 		<h2>@lang('Documentation')</h2>
+
+		<ul class="slide-docs-version">
+			<li>
+				<h2>Version</h2>
+
+				<ul>
+					<li>
+						@if (isset($currentVersion))
+							@include('partials.switcher')
+						@endif
+					</li>
+				</ul>
+			</li>
+		</ul>
+
 		{!! $index !!}
 	</div>
 
@@ -24,7 +39,7 @@
 <div class="docs-wrapper container">
 
 	<section class="sidebar">
-		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?zoneid=1673&serve=C6AILKT&placement=laravelcom" id="_carbonads_js"></script>
+		<script async type="text/javascript" src="//cdn.carbonads.com/carbon.js?serve=CKYILK3E&placement=laravelcom" id="_carbonads_js"></script>
 		<small><a href="#" id="doc-expand" style="font-size: 11px; color: #B8B8B8;">Expand All</a></small>
 		{!! $index !!}
 	</section>
