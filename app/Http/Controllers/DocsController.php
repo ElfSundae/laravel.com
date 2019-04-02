@@ -56,7 +56,15 @@ class DocsController extends Controller
         $content = $this->docs->get($version, $sectionPage);
 
         if (is_null($content)) {
-            abort(404);
+            return response()->view('docs', [
+                'title' => 'Page not found',
+                'index' => $this->docs->getIndex($version),
+                'content' => view('partials.doc-missing'),
+                'currentVersion' => $version,
+                'versions' => Documentation::getDocVersions(),
+                'currentSection' => '',
+                'canonical' => null,
+            ], 404);
         }
 
         $title = (new Crawler(mb_convert_encoding($content, 'HTML-ENTITIES', 'UTF-8')))->filterXPath('//h1');
@@ -94,6 +102,6 @@ class DocsController extends Controller
      */
     protected function isVersion($version)
     {
-        return in_array($version, array_keys(Documentation::getDocVersions()));
+        return array_key_exists($version, Documentation::getDocVersions());
     }
 }

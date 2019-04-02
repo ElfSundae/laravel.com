@@ -100,7 +100,7 @@
 	table {
 		border-collapse: collapse;
 		width: 100%;
-		font-size: 14px;
+		font-size: 13px;
 		th,
 		td {
 			border: 1px solid $color__lighter_gray;
@@ -112,32 +112,42 @@
 		}
 	}
 
-    blockquote {}
+	blockquote {}
 }
 
 .docs blockquote.has-icon {
-    position: relative;
+	background: none;
+	position: relative;
+	padding: 0;
 
-    &.video, &.laracast {
-        background: rgba(103, 58, 183, 0.62);
-    }
+	.video, .laracasts {
+		background: rgba(103, 58, 183, 0.62);
+	}
 
-    &.tip {
-        background: #64B5F6;
-    }
+	.tip {
+		background: #64B5F6;
+	}
 
-    p { padding-left: 40px; }
+	.note {
+		background: #f4645f;
+	}
 
-    .flag {
-        position: absolute;
-        width: 30px;
-        left: 15px;
-        top: 10px;
-        svg {
-            width: 24px;
-            height: 24px;
-        }
-    }
+	p {
+		border-radius: 3px;
+		padding: 10px 15px 10px 50px;
+		position: relative;
+	}
+
+	.flag {
+		position: absolute;
+		width: 30px;
+		left: 15px;
+		top: 10px;
+		svg {
+			width: 24px;
+			 height: 24px;
+		}
+	}
 }
 
 .docs .svg svg {
