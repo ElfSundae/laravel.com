@@ -4,7 +4,7 @@
  * Set the default documentation version...
  */
 if (! defined('DEFAULT_VERSION')) {
-    define('DEFAULT_VERSION', '5.6');
+    define('DEFAULT_VERSION', '5.8');
 }
 
 Route::get('/', function () {
@@ -41,3 +41,28 @@ Route::get('/partner/64robots', function () {
 Route::get('/partner/cubet', function () {
     return view('community-partner-cubet');
 });
+
+Route::get('/partner/dev-squad', function () {
+    return view('community-partner-dev-squad');
+});
+
+Route::get('/partner/ideil', function () {
+    return view('community-partner-ideil');
+});
+
+Route::get('/partner/cyber-duck', function () {
+    return view('community-partner-cyber-duck');
+});
+
+
+Route::get('/discord', function () {
+    return redirect('https://discord.gg/mPZNm7A');
+});
+
+Route::get('/certification', function () {
+    return redirect('https://certification.laravel.com');
+});
+
+// Route::get('/partner/insider', function () {
+//     return view('community-partner-insider');
+// });
