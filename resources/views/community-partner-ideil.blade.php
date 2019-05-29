@@ -77,7 +77,7 @@
 
                 <p>Communication is the key for every successful partnership and we value every bit of your time and hear every word. You make yourself clear on the topic and we distribute responsibilities among the members of the team. Tasks just get done.</p>
 
-                <p>deil. has a keen sense of satisfaction and you can experience it as well with your next delivered product. Be it a brilliant design, sophisticated technology or carefully considered details, people can not resist this magic.</p>
+                <p>ideil. has a keen sense of satisfaction and you can experience it as well with your next delivered product. Be it a brilliant design, sophisticated technology or carefully considered details, people can not resist this magic.</p>
             </div>
         </div>
     </div>
