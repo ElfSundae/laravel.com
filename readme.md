@@ -32,15 +32,15 @@
 
 #### 2. 安装 SSL 证书
 
-下载证书文件：https://img.0x321.com/files/laravel.com.crt ，双击安装证书，并将其加入到信任区域。各系统操作如下：
+下载证书文件：[laravel.com.crt](https://raw.githubusercontent.com/ElfSundae/laravel.com/master/_assets/laravel.com.crt) ，双击安装证书，并将其加入到信任区域。各系统操作如下：
 
 - **macOS:** 在「钥匙串访问」(Keychain Access) 中双击 `laravel.com` 这一行，展开「信任」栏，选择「始终信任」，然后关闭窗口即可。
 
-    ![](https://img.0x321.com/images/laravel-com-mirror/install-cert-macos.png)
+    ![](_assets/install-cert-macos.png)
 
 - **Windows:** 在安装证书时选择「受信任的根证书颁发机构」存储。
 
-    ![](https://img.0x321.com/images/laravel-com-mirror/install-cert-windows.png)
+    ![](_assets/install-cert-windows.png)
 
 #### 3. 测试
 
