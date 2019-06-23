@@ -33,6 +33,7 @@
 		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li><a href="https://larajobs.com/?partner=5#/">Jobs</a></li>
 		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
+		<li><a href="https://laravel.com/discord">Discord</a></li>
 		<li><a href="https://larachat.co">Slack</a></li>
 		<li><a href="https://twitter.com/laravelphp">Twitter</a></li>
 	</ul>
