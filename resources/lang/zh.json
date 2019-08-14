@@ -28,7 +28,7 @@
     "Launch your application in minutes!": "数分钟内开启你的应用！",
     "The official Laravel development environment. Powered by Vagrant, Homestead gets your entire team on the same page with the latest PHP, MySQL, Postgres, Redis, and more.": "官方的 Laravel 本地开发环境，由 Vagrant 强劲支持。 Homestead 让你整个团队的开发环境保持统一，并使用最新的 PHP、MySQL、Postgres、Redis 等。",
     "Hundreds (yes, hundreds) of Laravel and PHP video tutorials with new videos added every week. Skim the basics or start your journey to Laravel mastery. All for the price of lunch.": "数百部（是的，数百部）Laravel 和 PHP 的视频教程，并且每周都会增加新的视频。从入门到精通，只需一顿午饭钱。",
-    "Make subscription billing painless with built-in Stripe and Braintree integrations. Coupons, swapping subscriptions, cancellations, and even PDF invoices are ready out of the box.": "通过内置的 Stripe 和 Braintree 集成轻松实现付费订阅功能。优惠券、切换订阅、取消订阅、甚至 PDF 发票等均开箱即用。",
+    "Make subscription billing painless with built-in Stripe integration. Coupons, swapping subscriptions, cancellations, and even PDF invoices are ready out of the box.": "通过内置的 Stripe 集成轻松实现付费订阅功能。优惠券、切换订阅、取消订阅、甚至 PDF 发票等均开箱即用。",
     "And so much more!": "更多",
     "A Laravel development environment for Mac minimalists. No Vagrant, no Apache, no fuss.": "为 Mac 极简主义者准备的 Laravel 本地开发环境。没有 Vagrant ，不含 Apache ，远离抱怨焦躁。",
     "Cachet is the best way to inform customers of downtime. This is your status page.": "Cachet 是告知客户系统停机的最好方式。这就是你的「状态」页面。",

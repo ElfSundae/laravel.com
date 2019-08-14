@@ -222,7 +222,7 @@ Route::get('/user/{user}', function(App\User $user)
                         <div class="callout-icon">{!! svg('cashier') !!}</div>
                     </div>
                     <div class="callout-body">
-                        <p>@lang('Make subscription billing painless with built-in Stripe and Braintree integrations. Coupons, swapping subscriptions, cancellations, and even PDF invoices are ready out of the box.')</p>
+                        <p>@lang('Make subscription billing painless with built-in Stripe integration. Coupons, swapping subscriptions, cancellations, and even PDF invoices are ready out of the box.')</p>
                     </div>
                 </a>
             </div>
