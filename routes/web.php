@@ -4,7 +4,7 @@
  * Set the default documentation version...
  */
 if (! defined('DEFAULT_VERSION')) {
-    define('DEFAULT_VERSION', '7.x');
+    define('DEFAULT_VERSION', '8.x');
 }
 
 Route::get('/', function () {

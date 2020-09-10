@@ -108,6 +108,7 @@ class Documentation
     {
         return [
             'master' => 'Master',
+            '8.x' => '8.x',
             '7.x' => '7.x',
             '6.x' => '6.x',
             '5.8' => '5.8',
