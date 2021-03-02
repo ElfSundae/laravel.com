@@ -8,11 +8,11 @@ use App\Services\Documentation\Indexer;
 class IndexDocuments extends Command
 {
     /**
-     * The name of the console command.
+     * The name and signature of the console command.
      *
      * @var string
      */
-    protected $name = 'docs:index';
+    protected $signature = 'docs:index {version?*}';
 
     /**
      * The console command description.
@@ -28,6 +28,6 @@ class IndexDocuments extends Command
      */
     public function handle()
     {
-        app(Indexer::class)->indexAllDocuments();
+        app(Indexer::class)->indexAllDocuments($this->argument('version'));
     }
 }

@@ -93,15 +93,20 @@ class Indexer
     /**
      * Index all of the available documentation.
      *
+     * @param  array  $versions
      * @return void
      */
-    public function indexAllDocuments()
+    public function indexAllDocuments($versions = [])
     {
+        if (! $versions) {
+            $versions = array_keys(Documentation::getDocVersions());
+        }
+
         $this->index->clearIndex();
         $this->client->deleteIndex(static::$index_name);
 
-        foreach (Documentation::getDocVersions() as $key => $title) {
-            $this->indexAllDocumentsForVersion($key);
+        foreach ($versions as $version) {
+            $this->indexAllDocumentsForVersion($version);
         }
 
         $this->setSettings();
