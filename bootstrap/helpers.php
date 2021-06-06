@@ -12,14 +12,6 @@ function svg($src)
 }
 
 /**
- * Convert some text to Markdown...
- */
-function markdown($text)
-{
-    return (new ParsedownExtra)->text($text);
-}
-
-/**
  * Translate the given message.
  */
 function __($key, $replace = [], $locale = null)
