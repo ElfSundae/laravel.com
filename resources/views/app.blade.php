@@ -12,7 +12,7 @@
         <link rel="canonical" href="{{ url($canonical) }}" />
     @endif
     <link href='https://fonts.googleapis.com/css?family=Miriam+Libre:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="{{ mix('/assets/css/laravel.css') }}">
+    <link rel="stylesheet" href="{{ mix('/css/laravel.css') }}">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css">
     <link rel="stylesheet" type="text/css" href="https://cloud.typography.com/7737514/7707592/css/fonts.css" />
     <link rel="apple-touch-icon" href="/favicon.png">
@@ -79,8 +79,8 @@
 
     <script>window.rootUrl = '{{ url('/') }}'</script>
     <script>window.localeInUrl = '{{ request()->attributes->get('locale') }}'</script>
-    <script src="{{ mix('/assets/js/laravel.js') }}"></script>
-    <script src="/assets/js/viewport-units-buggyfill.js"></script>
+    <script src="{{ mix('/js/laravel.js') }}"></script>
+    <script src="/js/viewport-units-buggyfill.js"></script>
     <script>window.viewportUnitsBuggyfill.init();</script>
     <script>
         var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];

@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /**
  * Set the default documentation version...
  */
@@ -12,7 +14,7 @@ Route::get('/', function () {
 });
 
 Route::get('docs', 'DocsController@showRootPage');
-Route::get('docs/{version}/{page?}', 'DocsController@show');
+Route::get('docs/{version}/{page?}', 'DocsController@show')->name('docs.version');
 
 Route::get('partners', function () {
     return view('partners');
