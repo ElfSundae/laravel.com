@@ -165,7 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
-        // Vinkla\Algolia\AlgoliaServiceProvider::class,
+
 
         /*
          * Application Service Providers...

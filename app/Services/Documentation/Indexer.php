@@ -2,11 +2,12 @@
 
 namespace App\Services\Documentation;
 
-use ParsedownExtra;
+use Algolia\AlgoliaSearch\SearchClient;
 use App\CustomParser;
 use App\Documentation;
-use Vinkla\Algolia\AlgoliaManager;
+use Illuminate\Contracts\Config\Repository as Config;
 use Illuminate\Filesystem\Filesystem;
+use ParsedownExtra;
 
 class Indexer
 {
@@ -20,14 +21,14 @@ class Indexer
     /**
      * The Algolia Index instance.
      *
-     * @var \AlgoliaSearch\Index
+     * @var \Algolia\AlgoliaSearch\SearchIndex
      */
     protected $index;
 
     /**
      * The Algolia client instance.
      *
-     * @var \AlgoliaSearch\Client
+     * @var \Algolia\AlgoliaSearch\SearchClient
      */
     protected $client;
 
@@ -77,17 +78,22 @@ class Indexer
     /**
      * Create a new indexer service.
      *
-     * @param  AlgoliaManager  $client
+     * @param  \Illuminate\Contracts\Config\Repository  $config
      * @param  CustomParser  $markdown
      * @param  Filesystem  $files
      * @return void
      */
-    public function __construct(AlgoliaManager $client, CustomParser $markdown, Filesystem $files)
+    public function __construct(Config $config, CustomParser $markdown, Filesystem $files)
     {
-        $this->files = $files;
-        $this->client = $client;
+        $this->client = SearchClient::create(
+            $config->get('algolia.connections.main.id'),
+            $config->get('algolia.connections.main.key')
+        );
+
         $this->markdown = $markdown;
-        $this->index = $client->initIndex(static::$index_name.'_tmp');
+        $this->files = $files;
+
+        $this->index = $this->client->initIndex(static::$index_name.'_tmp');
     }
 
     /**
@@ -102,8 +108,7 @@ class Indexer
             $versions = array_keys(Documentation::getDocVersions());
         }
 
-        $this->index->clearIndex();
-        $this->client->deleteIndex(static::$index_name);
+        $this->index->delete();
 
         foreach ($versions as $version) {
             $this->indexAllDocumentsForVersion($version);
@@ -111,7 +116,7 @@ class Indexer
 
         $this->setSettings();
 
-        $this->client->moveIndex($this->index->indexName, static::$index_name);
+        $this->client->moveIndex($this->index->getIndexName(), static::$index_name);
     }
 
     /**
@@ -197,7 +202,7 @@ class Indexer
             }
         }
 
-        $this->index->addObjects($markup);
+        $this->index->saveObjects($markup, ['autoGenerateObjectIDIfNotExist' => true]);
 
         echo "Indexed $version.$slug" . PHP_EOL;
     }
