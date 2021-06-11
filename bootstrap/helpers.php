@@ -12,33 +12,6 @@ function svg($src)
 }
 
 /**
- * Translate the given message.
- */
-function __($key, $replace = [], $locale = null)
-{
-    static $loaded = [];
-
-    $locale = $locale ?: app('translator')->getLocale();
-
-    if (! isset($loaded[$locale])) {
-        $loaded[$locale] = app('files')->exists($full = app('path.lang')."/{$locale}.json")
-        ? json_decode(app('files')->get($full), true) : [];
-    }
-
-    $line = $loaded[$locale][$key] ?? null;
-
-    if (! isset($line)) {
-        $fallback = app('translator')->get($key, $replace, $locale);
-
-        if ($fallback !== $key) {
-            return $fallback;
-        }
-    }
-
-    return $line ?: $key;
-}
-
-/**
  * Get the path to the documentation file.
  *
  * @param  string  $version
