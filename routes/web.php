@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Route;
  * Set the default documentation version...
  */
 if (! defined('DEFAULT_VERSION')) {
-    define('DEFAULT_VERSION', '8.x');
+    define('DEFAULT_VERSION', '9.x');
 }
 
 Route::get('/', function () {
