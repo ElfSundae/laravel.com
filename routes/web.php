@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocsController;
 use Illuminate\Support\Facades\Route;
 
 /**
@@ -13,8 +14,8 @@ Route::get('/', function () {
     return view('marketing');
 });
 
-Route::get('docs', 'DocsController@showRootPage');
-Route::get('docs/{version}/{page?}', 'DocsController@show')->name('docs.version');
+Route::get('docs', [DocsController::class, 'showRootPage']);
+Route::get('docs/{version}/{page?}', [DocsController::class, 'show'])->name('docs.version');
 
 Route::get('partners', function () {
     return view('partners');

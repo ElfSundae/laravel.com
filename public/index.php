@@ -7,18 +7,6 @@ define('LARAVEL_START', microtime(true));
 
 /*
 |--------------------------------------------------------------------------
-| Register Helper Functions
-|--------------------------------------------------------------------------
-|
-| We've got some custom helper functions that are helpful. We just need
-| to load it here so they're available everywhere and we won't have
-| to worry about them at all. Little things. SVGs and whatnot.
-*/
-
-require __DIR__.'/../bootstrap/helpers.php';
-
-/*
-|--------------------------------------------------------------------------
 | Check If The Application Is Under Maintenance
 |--------------------------------------------------------------------------
 |
@@ -28,8 +16,8 @@ require __DIR__.'/../bootstrap/helpers.php';
 |
 */
 
-if (file_exists(__DIR__.'/../storage/framework/maintenance.php')) {
-    require __DIR__.'/../storage/framework/maintenance.php';
+if (file_exists($maintenance = __DIR__.'/../storage/framework/maintenance.php')) {
+    require $maintenance;
 }
 
 /*
@@ -60,8 +48,8 @@ $app = require_once __DIR__.'/../bootstrap/app.php';
 
 $kernel = $app->make(Kernel::class);
 
-$response = tap($kernel->handle(
+$response = $kernel->handle(
     $request = Request::capture()
-))->send();
+)->send();
 
 $kernel->terminate($request, $response);
