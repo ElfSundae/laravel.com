@@ -32,4 +32,6 @@ jobs:
           yarn run production
 
       - name: Checkout latest docs
-        run: source bin/checkout_latest_docs.sh
+        run: |
+          git config --global url.https://github.com/.insteadOf git@github.com:
+          source bin/checkout_latest_docs.sh
