@@ -26,9 +26,10 @@ jobs:
         run: |
           cp .env.example .env
           composer install -o --no-interaction --no-progress
-          php artisan key:generate --ansi
+          php artisan key:generate
           php artisan storage:link
           yarn
+          yarn run production
 
-      - name: Compile Assets
-        run: yarn run production
+      - name: Checkout latest docs
+        run: source bin/checkout_latest_docs.sh
