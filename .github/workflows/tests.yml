@@ -23,4 +23,4 @@ jobs:
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd, bcmath, gmp
 
       - name: Install dependencies
-        run: composer install -o --no-interaction --no-progress --no-suggest
+        run: composer install -o --no-interaction --no-progress
