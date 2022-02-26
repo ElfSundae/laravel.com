@@ -22,5 +22,13 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd, bcmath, gmp
 
-      - name: Install dependencies
-        run: composer install -o --no-interaction --no-progress
+      - name: Initial Application
+        run: |
+          cp .env.example .env
+          composer install -o --no-interaction --no-progress
+          php artisan key:generate --ansi
+          php artisan storage:link
+          yarn
+
+      - name: Compile Assets
+        run: yarn run production
