@@ -31,6 +31,9 @@ jobs:
           yarn
           yarn run production
 
+      - name: Execute tests
+        run: vendor/bin/phpunit
+
       - name: Checkout latest docs
         run: |
           git config --global url.https://github.com/.insteadOf git@github.com:
