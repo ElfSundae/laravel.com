@@ -62,7 +62,7 @@
         </ul>
         <p>Laravel is a trademark of Taylor Otwell. Copyright &copy; Taylor Otwell.</p>
         <p class="less-significant">
-            <a href="http://jackmcdade.com">
+            <a href="https://jackmcdade.com">
                 Designed by<br>
                 {!! svg('jack-mcdade') !!}
             </a>
