@@ -16,11 +16,3 @@ Route::get('/', function () {
 
 Route::get('docs', [DocsController::class, 'showRootPage']);
 Route::get('docs/{version}/{page?}', [DocsController::class, 'show'])->name('docs.version');
-
-Route::get('/discord', function () {
-    return redirect('https://discord.gg/mPZNm7A');
-});
-
-Route::get('/certification', function () {
-    return redirect('https://certification.laravel.com');
-});
