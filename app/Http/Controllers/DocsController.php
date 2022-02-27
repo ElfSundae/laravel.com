@@ -32,7 +32,7 @@ class DocsController extends Controller
      */
     public function showRootPage()
     {
-        return redirect('docs/'.DEFAULT_VERSION);
+        return redirect('docs/'.Documentation::defaultVersion());
     }
 
     /**
@@ -45,7 +45,7 @@ class DocsController extends Controller
     public function show($version, $page = null)
     {
         if (! $this->isVersion($version)) {
-            return redirect('docs/'.DEFAULT_VERSION.'/'.$version, 301);
+            return redirect('docs/'.Documentation::defaultVersion().'/'.$version, 301);
         }
 
         if (! defined('CURRENT_VERSION')) {
@@ -79,8 +79,8 @@ class DocsController extends Controller
 
         $canonical = null;
 
-        if ($this->docs->sectionExists(DEFAULT_VERSION, $sectionPage)) {
-            $canonical = 'docs/'.DEFAULT_VERSION.'/'.$sectionPage;
+        if ($this->docs->sectionExists(Documentation::defaultVersion(), $sectionPage)) {
+            $canonical = 'docs/'.Documentation::defaultVersion().'/'.$sectionPage;
         }
 
         return view('docs', [

@@ -138,4 +138,16 @@ class Documentation
             '4.2' => '4.2',
         ];
     }
+
+    /**
+     * Get the default documentation version.
+     *
+     * @return string
+     */
+    public static function defaultVersion()
+    {
+        static $defaultVersion;
+
+        return $defaultVersion ?: $defaultVersion = array_keys(static::getDocVersions())[1];
+    }
 }
