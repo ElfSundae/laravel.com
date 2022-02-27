@@ -20,17 +20,17 @@
 
 		<li class="divider"></li>
 
+		<li><a href="https://laracon.us">Laracon US</a></li>
 		<li><a href="https://laracon.com.au">Laracon AU</a></li>
 		<li><a href="https://laracon.eu">Laracon EU</a></li>
-		<li><a href="http://laracon.us">Laracon US</a></li>
 		<li><a href="https://laracon.net">Laracon Online</a></li>
 
 		<li class="divider"></li>
 
+		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li><a href="https://blog.laravel.com">Blog</a></li>
 		<li><a href="https://certification.laravel.com">Certification</a></li>
 		<li><a href="https://laracasts.com/discuss">Forums</a></li>
-		<li><a href="https://github.com/laravel/laravel">GitHub</a></li>
 		<li><a href="https://larajobs.com">Jobs</a></li>
 		<li><a href="http://www.laravelpodcast.com/">Podcast</a></li>
 		<li><a href="https://discord.gg/mPZNm7A">Discord</a></li>
