@@ -12,7 +12,6 @@
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",
-        "laravel/sanctum": "^2.11",
         "laravel/tinker": "^2.5",
         "symfony/browser-kit": "^5.0"
     },
