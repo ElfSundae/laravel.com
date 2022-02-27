@@ -38,3 +38,6 @@ jobs:
         run: |
           git config --global url.https://github.com/.insteadOf git@github.com:
           source bin/checkout_latest_docs.sh
+
+      - name: Build API documentation
+        run: base=`pwd` build/api.sh
