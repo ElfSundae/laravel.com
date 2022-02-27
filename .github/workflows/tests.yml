@@ -22,7 +22,7 @@ jobs:
           php-version: ${{ matrix.php }}
           extensions: dom, curl, libxml, mbstring, zip, pcntl, pdo, sqlite, pdo_sqlite, gd, bcmath, gmp
 
-      - name: Initial Application
+      - name: Initial application
         run: |
           cp .env.example .env
           composer install -o --no-interaction --no-progress
@@ -41,3 +41,6 @@ jobs:
 
       - name: Build API documentation
         run: base=`pwd` build/api.sh
+
+      - name: Cache website
+        run: php artisan cache-site
