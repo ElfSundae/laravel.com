@@ -1,7 +1,7 @@
 <li class="nav-docs"><a href="/docs">@lang('Documentation')</a></li>
 <li class="nav-laracasts"><a href="https://laracasts.com">Laracasts</a></li>
 <li class="nav-laravel-news"><a href="https://laravel-news.com">@lang('News')</a></li>
-<li class="nav-partners"><a href="/partners">@lang('Partners')</a></li>
+<li class="nav-partners"><a href="https://partners.laravel.com">@lang('Partners')</a></li>
 <li class="nav-forge"><a href="https://forge.laravel.com">Forge</a></li>
 
 <li class="dropdown community-dropdown">
