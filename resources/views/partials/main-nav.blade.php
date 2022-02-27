@@ -8,11 +8,23 @@
 	<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">@lang('Ecosystem') <span class="caret"></span></a>
 	<ul class="dropdown-menu" role="menu">
 
-		<li><a href="https://envoyer.io">Envoyer</a></li>
-		<li><a href="https://horizon.laravel.com">Horizon</a></li>
 		<li><a href="https://lumen.laravel.com">Lumen</a></li>
+		<li><a href="/docs/billing">Cashier</a></li>
+		<li><a href="/docs/dusk">Dusk</a></li>
+		<li><a href="/docs/broadcasting">Echo</a></li>
+		<li><a href="https://envoyer.io">Envoyer</a></li>
+		<li><a href="https://forge.laravel.com">Forge</a></li>
+		<li><a href="/docs/homestead">Homestead</a></li>
+		<li><a href="/docs/horizon">Horizon</a></li>
+		<li><a href="/docs/mix">Mix</a></li>
 		<li><a href="https://nova.laravel.com">Nova</a></li>
+		<li><a href="/docs/passport">Passport</a></li>
+		<li><a href="/docs/scout">Scout</a></li>
+		<li><a href="/docs/socialite">Socialite</a></li>
 		<li><a href="https://spark.laravel.com">Spark</a></li>
+		<li><a href="/docs/telescope">Telescope</a></li>
+		<li><a href="/docs/valet">Valet</a></li>
+		<li><a href="https://vapor.laravel.com">Vapor</a></li>
 
 		<li class="divider"></li>
 
