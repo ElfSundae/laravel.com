@@ -89,7 +89,7 @@ class CacheSite extends Command
     {
         return array_map(function ($version) {
             return url("api/$version/");
-        }, array_keys(Documentation::getDocVersions()));
+        }, ['5.5', '5.8', '6.x', '7.x', '8.x', '9.x', 'master']);
     }
 
     protected function saveResponseForUrls($urls)
