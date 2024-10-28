@@ -45,7 +45,7 @@ jobs:
 
       - name: Build API documentation
         run: base=`pwd` build/api.sh
-        if: matrix.php >= 8
+        if: matrix.php >= 8.2
 
       - name: Cache website
         run: php artisan cache-site
