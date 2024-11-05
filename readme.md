@@ -15,7 +15,7 @@
 - 搜索结果增加到 10 条（官网是 5 条）
 - 每两小时同步一次中英文开发文档、编译 API 文档
 - 全站静态化，提升访问速度和阅读体验
-- :heart: 中文文档转载自 [Laravel China](https://laravel-china.org) 社区：https://d.laravel-china.org
+- :heart: 中文文档转载自 [Laravel China 社区](https://learnku.com/laravel)：https://learnku.com/laravel/docs
 - :+1: 本镜像构建脚本：[build-laravel.com](https://github.com/ElfSundae/build-laravel.com)
 
 ## 优雅姿势
