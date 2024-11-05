@@ -80,7 +80,7 @@
     <script>window.rootUrl = '{{ url('/') }}'</script>
     <script>window.localeInUrl = '{{ request()->attributes->get('locale') }}'</script>
     <script src="{{ mix('/js/laravel.js') }}"></script>
-    <script src="/js/viewport-units-buggyfill.js"></script>
+    <script src="/js/viewport-units-buggyfill.js?v=0.6.2"></script>
     <script>window.viewportUnitsBuggyfill.init();</script>
     <script>
         var _gaq=[['_setAccount','UA-23865777-1'],['_trackPageview']];
