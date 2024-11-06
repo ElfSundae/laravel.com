@@ -36,12 +36,13 @@ class CacheSite extends Command
 
     protected function getRoutePaths()
     {
-        $routes = ['docs'];
+        $routes = [];
 
         // Routes
         foreach (Route::getRoutes() as $route) {
-            if (! Str::is('docs*', $route->uri())) {
-                $routes[] = $route->uri();
+            $uri = $route->uri();
+            if (! Str::is('docs/*', $uri)) {
+                $routes[] = $uri;
             }
         }
 
