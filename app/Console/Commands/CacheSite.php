@@ -47,7 +47,9 @@ class CacheSite extends Command
         }
 
         // Docs content pages
-        $docFiles = glob(resource_path('docs/{*,*/*}{,/*.md}'), GLOB_BRACE) ?: [];
+        $docFiles = array_values(array_unique(
+            glob(resource_path('docs/{*,*/*}{,/*.md}'), GLOB_BRACE) ?: []
+        ));
         $docsRoot = resource_path('docs/');
         $docVersions = array_keys(Documentation::getDocVersions());
         foreach ($docFiles as $path) {
